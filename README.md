@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+Live Websit :  https://lively-macaron-c4fea3.netlify.app/
 # portfolio
 =======
 # Getting Started with Create React App
