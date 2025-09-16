@@ -4,21 +4,42 @@ import ieee from "../../img/ieee_icon.png";
 import TandF from "../../img/TandF_icon.png";
 import aws from "../../img/aws_icon.jpeg";
 import microsoft from "../../img/microsoft_icon.jpg";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
+import { motion, spring } from "framer-motion";
 
 function Works() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="works">
+    <div className="works" id="works">
       <div className="awesome">
-        <span>Worked on all these</span>
-        <span>Research Papers and Certifications</span>
-        <span>
-          kkkkkkkkkkk
+        <span style={{ color: darkMode ? "white" : "" }}>
+          Worked on all these
+        </span>
+        <span style={{ color: "var(--green)" }}>
+          Publications and Certifications
+        </span>
+        <span className="section-content">
+          •{" "}
+          <em>
+            “Identification and Classification of Paddy Crop Diseases using Big
+            Data ML Techniques”
+          </em>
+          - Taylor & Francis, Data Science and Data Analytics
           <br />
-          mmmmmmmmmmm
+          <br />• <em>“Real-Time Sign Language Recognition”</em> - IEEE
+          International Conference, DISCOVER
           <br />
-          nnnnnnnnnnnn
+          <br />•{" "}
+          <em>
+            Microsoft Certified: Introduction to Programming Using JavaScript
+          </em>
+          - Microsoft Technology Associate (MTA)
           <br />
-          jjjjjjjjjjjj
+          <br />
+          <em>• AWS Certified Cloud Practitioner</em> – Amazon Web Services
+          (CLF-C01)
         </span>
 
         <button className="button s-button">Hire me</button>
@@ -27,7 +48,13 @@ function Works() {
 
       {/* right-side */}
       <div className="w-right">
-        <div className="w-mainCircle">
+        <motion.div
+          initial={{ rotate: 45 }}
+          whileInView={{ rotate: 0 }}
+          viewport={{ margin: "-40px" }}
+          transition={{ duration: 3.5, type: spring }}
+          className="w-mainCircle"
+        >
           <div className="w-secCircle">
             <img src={ieee} alt="" />
           </div>
@@ -40,10 +67,10 @@ function Works() {
           <div className="w-secCircle">
             <img src={microsoft} alt="" />
           </div>
-          {/*background circles*/}
-          <div className="w-backCircle blueCircle"></div>
-          <div className="w-backCircle greenCircle"></div>
-        </div>
+        </motion.div>
+        {/*background circles*/}
+        <div className="w-backCircle blueCircle"></div>
+        <div className="w-backCircle greenCircle"></div>
       </div>
     </div>
   );
