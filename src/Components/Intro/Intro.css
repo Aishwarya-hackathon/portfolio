@@ -67,14 +67,14 @@
 
 .i-right > :nth-child(1) {
   transform: scale(0.75);
-  left: -12%;
+  left: -11%;
   top: -12%;
 }
 
 .i-right > :nth-child(2) {
   top: -4.6rem;
   transform: scale(0.67);
-  left: -4rem;
+  left: -3rem;
 }
 
 .i-right > :nth-child(3) {

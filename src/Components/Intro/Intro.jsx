@@ -15,7 +15,7 @@ import { themeContext } from "../../Context";
 import { motion, spring } from "framer-motion";
 
 import { useContext } from "react";
-
+import Resume from "../Services/Resume.pdf";
 function Intro() {
   const transition = { duration: 2, type: spring };
 
@@ -27,14 +27,16 @@ function Intro() {
         <div className="i-name">
           <span style={{ color: darkMode ? "white" : "" }}>Hi! I am</span>
           <span>Aishwarya</span>
-          <span>
+          <span style={{ fontSize: "1rem" }}>
             Full-stack software engineer with experience in AI-powered products,
             frontend UI, backend APIs, and cloud deployments. Self-driven and
             proactive communicator, comfortable collaborating across teams and
             taking ownership of tasks.
           </span>
         </div>
-        <button className="button i-button">Hire me</button>
+        <a href={Resume} download>
+          <button className="button i-button">Hire me</button>
+        </a>
         <div className="i-icons">
           <a href="https://github.com/Aishwarya-hackathon">
             <img src={GitHub} alt="" />

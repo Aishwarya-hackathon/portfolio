@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 62vh;
 }
 
 /* heading */
@@ -42,4 +42,10 @@
   border-color: var(--green);
   border-style: solid;
   border-width: 0.15rem;
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio {
+    margin-top: 5rem;
+  }
 }
